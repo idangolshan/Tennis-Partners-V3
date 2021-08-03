@@ -1,0 +1,49 @@
+// app global css in SCSS form
+@import "./layouts/layouts";
+
+
+.constrain {
+  //max-width: 975px
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  /* you need to match the shadow color to your background or image border for the desired effect*/
+  box-shadow: 0 0 8px 8px white inset;
+}
+
+.q-card {
+  border-radius: 32px;
+  width: 80%
+}
+
+.loading {
+  display: block;
+  margin: 5px 0;
+  bottom: 80px;
+  left: 50%;
+  top: 50%;
+  border: 2px solid #f3f3f3;
+  border-top: 5px solid #e39e32;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 0.3s linear infinite;
+  align-items: center;
+  position: absolute;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: #7b9676;
+
+}
