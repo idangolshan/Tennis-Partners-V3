@@ -56,6 +56,10 @@ function loginWithGoogle() {
       localStorage.setItem('user', JSON.stringify(user))
       localStorage.setItem('uid', JSON.stringify(user.uid))
 
+      this.$q.notify({
+        type: 'positive',
+        message: 'Welcome Back!'})
+
     }).catch((error) => {
     // Handle Errors here.
     var errorCode = error.code;
@@ -64,7 +68,10 @@ function loginWithGoogle() {
     var email = error.email;
     // The firebase.auth.AuthCredential type that was used.
     var credential = error.credential;
-  });
+    this.$q.notify({
+      type: 'negative',
+      message: ' ' + error.message });
+    });
 }
 
   function plainSignIn(email, password) {

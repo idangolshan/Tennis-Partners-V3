@@ -16,10 +16,6 @@ export default {
     signInWithGoogle() {
       firebaseAuth.loginWithGoogle().then(() => {
 
-        this.$q.notify({
-          type: 'positive',
-          message: 'Welcome Back!'
-        })
         this.$router.push('/SearchForPlayers')
       })
     }
