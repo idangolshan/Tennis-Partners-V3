@@ -65,14 +65,15 @@ export default {
     }
   },
   methods: {
-    ...mapActions('players', ['insertPlayer', 'updatePlayer', 'setEditPlayerById']), // שלוש נקודות לפני המאפ זה כי הוספנו עוד פונקציה לוקאלית למאפ אקשיונס
+    ...mapActions('players', ['insertPlayer', 'updatePlayer', 'setEditPlayerById']),
+    // שלוש נקודות לפני המאפ זה כי הוספנו עוד פונקציה לוקאלית למאפ אקשיונס
     ...mapMutations('players', ['setEditedPlayer', 'setEditedPlayerId']),
 
     localSetEditedPlayer() {
       this.setEditedPlayer(this.localEditedPlayer)
     },
     goToSearch() {
-      this.$router.push('/SearchForPlayers');
+      this.$router.push('/SearchForPlayers/' + this.playerIdFromParams);
     },
     insert() {
       this.localSetEditedPlayer();

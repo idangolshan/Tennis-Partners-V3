@@ -62,11 +62,12 @@ export default {
 
     let player = {};
     debugger
-    //לבדוק למה התנאי לא עובד
-    if (state.players.length && state.players.find(() => playerId === state.editedPlayerId))  {
+
+    if (state.players.length && state.players.find(() => playerId === state.editedPlayerId)) {
       debugger
       player = state.players.find(() => playerId === state.editedPlayerId);
     } else {
+      //לבדוק למה לא מגיע לכאן
       debugger
       player = await firestore.getById ({entity: 'players', playerId})
     }

@@ -28,7 +28,7 @@ const routes = [
 
       },
       {
-        path: '/SearchForPlayers',
+        path: '/SearchForPlayers/:id',
         name: 'SearchForPlayers',
         component: () => import('../pages/searchForPlayers.vue'),
         meta: {authNotRequired: false}

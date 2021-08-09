@@ -20,7 +20,7 @@ export default {
           type: 'positive',
           message: 'Welcome Back!'
         })
-        this.$router.push('/searchComponent')
+        this.$router.push('/SearchForPlayers')
       })
     }
   }

@@ -16,7 +16,7 @@
 
         <q-tabs v-model="tab">
           <q-route-tab icon="person" label="הפרטים שלי" :to=editUserInfoPath exact/>
-          <q-route-tab icon="person_search" label="חיפוש שחקנים" to="/searchForPlayers" exact/>
+          <q-route-tab icon="person_search" label="חיפוש שחקנים" :to=editSearchForPlayersPath exact/>
           <q-route-tab icon="question_answer" label="צ'אט" to="/chat" exact/>
         </q-tabs>
       </q-header>
@@ -51,6 +51,9 @@ export default {
   computed: {
     editUserInfoPath() {
         return '/userInfo/' + this.id;
+    },
+    editSearchForPlayersPath() {
+      return '/searchForPlayers/' + this.id;
     }
   }
 }

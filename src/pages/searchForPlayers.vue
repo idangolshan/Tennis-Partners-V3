@@ -26,11 +26,13 @@ export default {
     return {
       loading: false,
       playersTableFromGetters: [],
+
     }
   },
   computed: {
     ...mapState('players', ['players']),
     playersTableGetters() {
+      //set the state editedPlayer
       return this.filterRelevantPlayers
     },
     // vueFilteredPlayersCount() {
@@ -40,12 +42,16 @@ export default {
   },
   methods: {
     ...mapGetters('players', ['filterCurrentPlayer','filterRelevantPlayers']),
-    ...mapActions('players', ['deletePlayer', 'getPlayersAc']), // שלוש נקודות לפני המאפ זה כי הוספנו עוד פונקציה לוקאלית למאפ אקשיונס
+    // שלוש נקודות לפני המאפ זה כי הוספנו עוד פונקציה לוקאלית למאפ אקשיונס
+    ...mapActions('players', ['deletePlayer', 'getPlayersAc',"setEditPlayerById"]),
 
   },
+
   async created() {
     this.loading = true
     await this.getPlayersAc()
+    debugger
+    await this.setEditPlayerById(this.$route.params.id)
     this.playersTableFromGetters = this.playersTableGetters()
     this.loading = false
   }
