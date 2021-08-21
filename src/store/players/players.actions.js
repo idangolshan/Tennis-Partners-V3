@@ -1,15 +1,16 @@
 // import database from "../../middleware/firebase/database";
 import firestore from "../../middleware/firebase/firestore"
 
+
 export default {
   getPlayersAc: async ({commit}) => {
 
     // const players = await database.read({entity:'players'});   //realtime database option
 
     const players = await firestore.read({entity: 'players'});
-    debugger
     commit('setPlayers', players)
   },
+
 
   deletePlayer: async ({state, commit}, idForSet) => {   //לא משנה סדר הכתיבה של הנתונים שהפונקציה הזאת מקבלת
 
@@ -24,6 +25,7 @@ export default {
     commit('deletePlayer', playerId)
   },
 
+
   updatePlayer: async ({state, commit}) => {
     const player = {}
     Object.assign(player, state.editedPlayer)
@@ -37,6 +39,7 @@ export default {
     commit('resetEditedPlayerId')
     commit('editPlayer', player)
   },
+
 
   insertPlayer: async ({state, commit}) => {
 
@@ -55,25 +58,22 @@ export default {
     commit('resetEditedPlayer')
     // saves in state
     commit('insertPlayer', player)
-
   },
+
 
   setEditPlayerById: async ({state, commit},playerId) => {
 
     let player = {};
-    debugger
 
     if (state.players.length && state.players.find(() => playerId === state.editedPlayerId)) {
-      debugger
       player = state.players.find(() => playerId === state.editedPlayerId);
     } else {
-      //לבדוק למה לא מגיע לכאן
-      debugger
       player = await firestore.getById ({entity: 'players', playerId})
     }
 
     // commit('resetEditedPlayerId'); אם אתקל בבאגים אולי יעזור?
     commit('setEditedPlayer', player);
   }
+
 
 }

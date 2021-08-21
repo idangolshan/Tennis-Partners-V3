@@ -1,5 +1,5 @@
 <template>
-  <q-btn  flat round dense icon="logout" size="18px" @click="logOut()" label="התנתק"></q-btn>
+  <q-btn  flat round dense icon="logout" size="15px" @click="logOut()" label="התנתק"></q-btn>
 </template>
 
 <script>
