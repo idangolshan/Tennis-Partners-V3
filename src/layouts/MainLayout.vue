@@ -10,7 +10,7 @@
 
           <q-toolbar-title style="font-size: 20px">Partners For Tennis</q-toolbar-title>
 
-          <q-btn v-if="this.id === 'false'" to="/signIn" flat round dense icon="login" size="18px" label="התחבר"/>
+          <q-btn v-if="this.id === 'false'" to="/signIn" flat round dense icon="login" size="15px" label="התחבר"/>
           <logOut v-if="this.id !== 'false'"/>
         </q-toolbar>
 
