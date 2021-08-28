@@ -39,10 +39,10 @@ export default {
 
 #main{
   position: absolute;
-  height: 100%;
-  width: 100%;
   background-image: url("../assets/tennisCourtAllGreen.jpeg");
   background-size: cover;
+  width: 100%;
+  height: 100vh;
   text-align: center;
 }
 

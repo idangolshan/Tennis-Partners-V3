@@ -21,7 +21,7 @@
           <q-route-tab icon="question_answer" label="צ'אט" to="/chat" exact/>
         </q-tabs>
       </q-header>
-      <q-page-container>
+      <q-page-container class="mainLayout">
         <router-view/>
       </q-page-container>
     </q-layout>

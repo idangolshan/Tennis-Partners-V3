@@ -19,16 +19,16 @@ export default function (/* { store, ssrContext } */) {
     base: process.env.VUE_ROUTER_BASE
   })
 
-  Router.beforeEach(async (to, from, next) => {
-    //Router guard without Admin's
-    let user = localStorage.getItem('user')
-    user === 'false' ? user = JSON.parse (user) : null;
-
-    if (!user && to.path !== '/signIn')
-      await next('/signIn');
-    else if (user && to.path === '/signIn')
-      await next('/')
-    else await next();
-  })
+  // Router.beforeEach(async (to, from, next) => {
+  //   //Router guard without Admin's
+  //   let user = localStorage.getItem('user')
+  //   user === 'false' ? user = JSON.parse (user) : null;
+  //
+  //   if (!user && to.path !== '/signIn')
+  //     await next('/signIn');
+  //   else if (user && to.path === '/signIn')
+  //     await next('/')
+  //   else await next();
+  // })
   return Router
 }

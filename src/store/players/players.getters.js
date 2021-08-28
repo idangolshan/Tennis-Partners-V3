@@ -13,7 +13,7 @@ export default {
     filteredPlayers = getters.filterCurrentPlayer();
     let id = localStorage.getItem('uid')
     //filter the filteredPlayers array results for matching level & area players
-    filteredPlayers = filteredPlayers.filter(player => player.district === state.editedPlayer.district )
+    // filteredPlayers = filteredPlayers.filter(player => player.district === state.editedPlayer.district )
     return filteredPlayers
   },
 

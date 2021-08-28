@@ -3,19 +3,24 @@
   <div class="q-pa-md" id="inputs">
     <q-input rounded outlined autogrow v-model="localEditedPlayer.name" label="שם שחקן" class="input"/>
 
-    <q-select rounded outlined autogrow v-model="localEditedPlayer.gender" label="מין" :options="genderOptions" class="input"/>
+    <q-select rounded outlined autogrow v-model="localEditedPlayer.gender" label="מין"
+              :options="genderOptions" class="input"/>
 
     <q-select type="number" rounded outlined autogrow v-model="localEditedPlayer.age" :options="ageOptions"
               label="גיל" class="input"/>
-    <q-select rounded outlined autogrow v-model="localEditedPlayer.district" :options="areaOptions" label="אזור בארץ" class="input"/>
+    <q-select rounded outlined autogrow v-model="localEditedPlayer.district" :options="areaOptions"
+              label="אזור בארץ" class="input"/>
 
     <q-input rounded outlined autogrow v-model="localEditedPlayer.city" label="עיר" class="input"/>
 
-    <q-input rounded outlined autogrow v-model="localEditedPlayer.tennisCourt" label="מגרש מועדף" class="input"/>
+    <q-input rounded outlined autogrow v-model="localEditedPlayer.tennisCourt" label="מגרש מועדף"
+             class="input"/>
 
-    <q-select rounded outlined autogrow v-model="localEditedPlayer.level" :options="levelOptions" label="רמה" class="input"/>
+    <q-select rounded outlined autogrow v-model="localEditedPlayer.level" :options="levelOptions"
+              label="רמה" class="input"/>
 
-    <q-input rounded outlined autogrow v-model="localEditedPlayer.timesAWeek" label="תדירות משחק שבועית" class="input"/>
+    <q-input rounded outlined autogrow v-model="localEditedPlayer.timesAWeek" label="תדירות משחק שבועית"
+             class="input"/>
 
     <q-input rounded outlined autogrow v-model="localEditedPlayer.days" label="ימים מועדפים" class="input"/>
 

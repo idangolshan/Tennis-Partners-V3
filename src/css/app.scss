@@ -1,6 +1,15 @@
 // app global css in SCSS form
 @import "./layouts/layouts";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap');
 
+* {
+  font-family: 'M PLUS 1p', sans-serif;
+  //color: #e39e32;
+}
+
+.mainLayout {
+  background: #405262;
+}
 
 .constrain {
   //max-width: 975px
@@ -8,7 +17,7 @@
   width: 400px;
   height: 400px;
   /* you need to match the shadow color to your background or image border for the desired effect*/
-  box-shadow: 0 0 8px 8px white inset;
+  box-shadow: 0 0 8px 8px #ffffff inset;
 }
 
 .q-card {
@@ -44,6 +53,6 @@
 .container {
   display: flex;
   justify-content: center;
-  background-color: #7b9676;
+  //background-color: #E7E7BC;
 
 }
